@@ -1,0 +1,24 @@
+<Page
+    x:Class="SistemaGestaoDeBovinos.Views.AddEditAnimalView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SistemaGestaoDeBovinos.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel Margin="24">
+            <TextBox Header="Identificador" Text="{Binding Animal.Identificador, Mode=TwoWay}"/>
+            <TextBox Header="Raça" Text="{Binding Animal.Raca, Mode=TwoWay}" Margin="0,12,0,0"/>
+            <TextBox Header="Sexo" Text="{Binding Animal.Sexo, Mode=TwoWay}" Margin="0,12,0,0"/>
+            <DatePicker Header="Data de Nascimento" Date="{Binding Animal.DataNascimento, Mode=TwoWay}" Margin="0,12,0,0"/>
+            <TextBox Header="Status" Text="{Binding Animal.Status, Mode=TwoWay}" Margin="0,12,0,0"/>
+            <StackPanel Orientation="Horizontal" Margin="0,24,0,0">
+                <Button Content="Salvar" Command="{Binding SaveCommand}"/>
+                <Button Content="Cancelar" Command="{Binding CancelCommand}" Margin="12,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
